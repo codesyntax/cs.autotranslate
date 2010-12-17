@@ -7,5 +7,15 @@
   <five:registerPackage package="." initialize=".initialize" />
 
   <!-- -*- extra stuff goes here -*- -->
+  <utility
+      name="autotranslate.AutoTranslatableFolder"
+      factory=".translate.AutoTranslatableFolder"
+      />
+  
+  <subscriber for="*
+                   Products.Archetypes.interfaces.IObjectInitializedEvent"
+              handler=".subscriber.translate"
+              />
+
   
 </configure>
