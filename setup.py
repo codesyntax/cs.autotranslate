@@ -15,9 +15,9 @@ setup(name='cs.autotranslate',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      author='Mikel Larreategi',
+      author_email='mlarreategi@codesyntax.com',
+      url='https://github.com/codesyntax/cs.autotranslate',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['cs'],
@@ -25,6 +25,8 @@ setup(name='cs.autotranslate',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'Products.LinguaPlone',
+          'p4a.subtyper',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
@@ -33,6 +35,4 @@ setup(name='cs.autotranslate',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
       )
